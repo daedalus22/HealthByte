@@ -34,7 +34,7 @@
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
                                                             <connections>
-                                                                <segue destination="QJl-YI-VVk" kind="modal" modalTransitionStyle="coverVertical" id="9sF-sT-RJZ"/>
+                                                                <segue destination="QJl-YI-VVk" kind="modal" modalTransitionStyle="flipHorizontal" id="9sF-sT-RJZ"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="EAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-tu-TIL">
@@ -554,6 +554,11 @@
                         <segue destination="cCY-NK-VaB" kind="modal" modalTransitionStyle="flipHorizontal" id="1yf-sb-gBM"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="mad-Bi-iSo">
+                    <connections>
+                        <segue destination="ztr-Wx-jQM" kind="modal" id="CQv-yI-rzr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="84" y="-65"/>
         </scene>
@@ -655,20 +660,37 @@
         <scene sceneID="vvV-eM-4aS">
             <objects>
                 <viewController id="QJl-YI-VVk" customClass="MDSecondViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qfF-Rp-xLf">
+                    <view key="view" contentMode="scaleToFill" id="XcB-Q9-eJC">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="md_settings_mockup.png" translatesAutoresizingMaskIntoConstraints="NO" id="1LV-U2-kmC"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Screen Shot 2013-05-10 at 4.41.28 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="nz5-Sv-x66">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="584" id="1VA-ZI-1xn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJb-xf-dnX">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterInfo:" destination="QJl-YI-VVk" eventType="touchUpInside" id="i5d-H2-P7X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1LV-U2-kmC" firstAttribute="leading" secondItem="qfF-Rp-xLf" secondAttribute="leading" type="default" id="3vQ-uK-MYg"/>
-                            <constraint firstItem="1LV-U2-kmC" firstAttribute="top" secondItem="qfF-Rp-xLf" secondAttribute="top" type="default" id="WQu-2H-2s7"/>
+                            <constraint firstItem="ZJb-xf-dnX" firstAttribute="top" secondItem="XcB-Q9-eJC" secondAttribute="top" constant="3" id="FEX-rd-pxm"/>
+                            <constraint firstItem="nz5-Sv-x66" firstAttribute="leading" secondItem="XcB-Q9-eJC" secondAttribute="leading" type="default" id="h5Z-7B-gfy"/>
+                            <constraint firstItem="nz5-Sv-x66" firstAttribute="top" secondItem="XcB-Q9-eJC" secondAttribute="top" type="default" id="kUV-Hq-WTD"/>
+                            <constraint firstItem="nz5-Sv-x66" firstAttribute="trailing" secondItem="XcB-Q9-eJC" secondAttribute="trailing" type="default" id="oLW-rX-2q0"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJb-xf-dnX" secondAttribute="trailing" constant="7" id="yY1-gh-d4Q"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="HjV-Ei-wS5" appends="YES" id="vlT-U4-py7"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmj-6p-kSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -678,7 +700,43 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="593" y="617"/>
+            <point key="canvasLocation" x="567" y="611"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dmt-JF-Bu0">
+            <objects>
+                <viewController id="D6A-5H-4zX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9lu-UX-zqA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="circle_of_loved_ones.png" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-xW-aDM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="ZNc-hK-b1V"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Some education about sharing???" translatesAutoresizingMaskIntoConstraints="NO" id="OjR-EL-Z6L">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="p9W-aM-RJt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OjR-EL-Z6L" firstAttribute="top" secondItem="9lu-UX-zqA" secondAttribute="top" type="default" id="dws-6T-jeY"/>
+                            <constraint firstItem="aGq-xW-aDM" firstAttribute="top" secondItem="9lu-UX-zqA" secondAttribute="top" constant="225" id="he7-dH-Jqb"/>
+                            <constraint firstItem="OjR-EL-Z6L" firstAttribute="leading" secondItem="9lu-UX-zqA" secondAttribute="leading" type="default" id="lzI-eW-Ecp"/>
+                            <constraint firstItem="aGq-xW-aDM" firstAttribute="leading" secondItem="9lu-UX-zqA" secondAttribute="leading" type="default" id="nK9-ol-PYW"/>
+                            <constraint firstItem="OjR-EL-Z6L" firstAttribute="trailing" secondItem="9lu-UX-zqA" secondAttribute="trailing" type="default" id="va8-pZ-Jpx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKr-ev-RO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="611"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EBk-Gt-9We">
@@ -726,9 +784,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Screen Shot 2013-05-10 at 4.41.28 PM.png" width="318" height="545"/>
         <image name="circle_of_loved_ones.png" width="320" height="320"/>
         <image name="md_friend_mockup.png" width="320" height="569"/>
-        <image name="md_settings_mockup.png" width="320" height="548"/>
         <image name="menu_icon.png" width="40" height="40"/>
         <image name="plate.png" width="48" height="48"/>
         <image name="second.png" width="30" height="30"/>
@@ -775,9 +833,6 @@
         <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>
             <relationships>
-                <relationship kind="action" name="summaryChartSwiped:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="veggieConsumed:" candidateClass="UILongPressGestureRecognizer"/>
-                <relationship kind="action" name="waterConsumed:" candidateClass="UILongPressGestureRecognizer"/>
                 <relationship kind="outlet" name="bvGoal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bvScore" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bvTitle" candidateClass="UILabel"/>
@@ -811,6 +866,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nzO-P7-LEw"/>
+        <segue reference="QqJ-QO-D23"/>
     </inferredMetricsTieBreakers>
 </document>

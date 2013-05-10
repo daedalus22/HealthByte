@@ -29,5 +29,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];    
 }
 
+- (IBAction)enterInfo:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];  
+}
 
 @end
