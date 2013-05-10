@@ -1,30 +1,26 @@
 //
-//  MDMoveData.m
-//  HealthPathBCBS
+//  MDSleepData.m
+//  HealthByteBCBS
 //
 //  Created by Xiaoshan Huang on 5/10/13.
 //  Copyright (c) 2013 Dean Chen. All rights reserved.
 //
 
-#import "MDMoveData.h"
+#import "MDSleepData.h"
 #import "CHCSVParser.h"
 
-@interface MDMoveData()
-
+@interface MDSleepData()
 @property (strong, nonatomic) NSMutableArray *lines;
 @property (strong, nonatomic) NSMutableArray *currentLine;
-
 @end
-
-
-@implementation MDMoveData
+@implementation MDSleepData
 
 - (id)init
 {
     self = [super init];
     NSString *file = @(__FILE__);
-    file = [[file stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"movedata.csv"];
-    NSLog(@"Begin reading movedata");
+    file = [[file stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"sleepdata.csv"];
+    NSLog(@"Begin reading sleepdata");
 	NSStringEncoding encoding = 0;
     NSInputStream *stream = [NSInputStream inputStreamWithFileAtPath:file];
 	CHCSVParser * p = [[CHCSVParser alloc] initWithInputStream:stream usedEncoding:&encoding delimiter:','];
@@ -49,7 +45,7 @@
         }
         [_data setObject:[NSDictionary dictionaryWithObjects:datas forKeys:_dataKeys] forKey:[_times objectAtIndex:dp-1]];
     }
-
+    
     return self;
 }
 
@@ -76,4 +72,6 @@
     _lines = nil;
 }
 
+
 @end
+

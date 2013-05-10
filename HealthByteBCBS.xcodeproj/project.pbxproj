@@ -66,6 +66,8 @@
 		ADC9A28A173DA8DA00051ED0 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A286173DA8DA00051ED0 /* CHCSVParser.m */; };
 		ADC9A28C173DA8DA00051ED0 /* MDMoveData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A289173DA8DA00051ED0 /* MDMoveData.m */; };
 		ADC9A28F173DAB7100051ED0 /* movedata.csv in Resources */ = {isa = PBXBuildFile; fileRef = ADC9A28E173DAB7100051ED0 /* movedata.csv */; };
+		ADC9A291173DBDE000051ED0 /* sleepdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = ADC9A290173DBDE000051ED0 /* sleepdata.csv */; };
+		ADC9A294173DBE0900051ED0 /* MDSleepData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A293173DBE0900051ED0 /* MDSleepData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +159,9 @@
 		ADC9A288173DA8DA00051ED0 /* MDMoveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMoveData.h; sourceTree = "<group>"; };
 		ADC9A289173DA8DA00051ED0 /* MDMoveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMoveData.m; sourceTree = "<group>"; };
 		ADC9A28E173DAB7100051ED0 /* movedata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movedata.csv; sourceTree = "<group>"; };
+		ADC9A290173DBDE000051ED0 /* sleepdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sleepdata.csv; sourceTree = "<group>"; };
+		ADC9A292173DBE0900051ED0 /* MDSleepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSleepData.h; sourceTree = "<group>"; };
+		ADC9A293173DBE0900051ED0 /* MDSleepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSleepData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,9 +326,12 @@
 		ADC9A28D173DA8F300051ED0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ADC9A290173DBDE000051ED0 /* sleepdata.csv */,
 				ADC9A28E173DAB7100051ED0 /* movedata.csv */,
 				ADC9A285173DA8DA00051ED0 /* CHCSVParser.h */,
 				ADC9A286173DA8DA00051ED0 /* CHCSVParser.m */,
+				ADC9A292173DBE0900051ED0 /* MDSleepData.h */,
+				ADC9A293173DBE0900051ED0 /* MDSleepData.m */,
 				ADC9A288173DA8DA00051ED0 /* MDMoveData.h */,
 				ADC9A289173DA8DA00051ED0 /* MDMoveData.m */,
 			);
@@ -407,6 +415,7 @@
 				3CD29C7B173D7E3400FB6427 /* sleep_azumio_share.png in Resources */,
 				0500C067173D943200070F15 /* circle_of_loved_ones.png in Resources */,
 				ADC9A28F173DAB7100051ED0 /* movedata.csv in Resources */,
+				ADC9A291173DBDE000051ED0 /* sleepdata.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +452,7 @@
 				ADC9A284173DA8C900051ED0 /* ShinobiChart+trialChart.m in Sources */,
 				ADC9A28A173DA8DA00051ED0 /* CHCSVParser.m in Sources */,
 				ADC9A28C173DA8DA00051ED0 /* MDMoveData.m in Sources */,
+				ADC9A294173DBE0900051ED0 /* MDSleepData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

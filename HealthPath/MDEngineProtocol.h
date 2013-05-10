@@ -45,3 +45,11 @@ typedef enum MDTimePeriod_  {
 
 @end
 
+@protocol SleepData <NSObject>
+
+@required
+- (NSMutableArray *) times;
+- (NSMutableArray *) dataKeys;
+- (NSMutableDictionary *) data;
+
+@end
