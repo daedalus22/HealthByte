@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "054B98A51734294F0024BF56"
-               BuildableName = "HealthPathBCBS_enhao.app"
+               BuildableName = "HealthByteBCBS.app"
                BlueprintName = "HealthByteBCBS"
                ReferencedContainer = "container:HealthByteBCBS.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "054B98A51734294F0024BF56"
-            BuildableName = "HealthPathBCBS_enhao.app"
+            BuildableName = "HealthByteBCBS.app"
             BlueprintName = "HealthByteBCBS"
             ReferencedContainer = "container:HealthByteBCBS.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "054B98A51734294F0024BF56"
-            BuildableName = "HealthPathBCBS_enhao.app"
+            BuildableName = "HealthByteBCBS.app"
             BlueprintName = "HealthByteBCBS"
             ReferencedContainer = "container:HealthByteBCBS.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "054B98A51734294F0024BF56"
-            BuildableName = "HealthPathBCBS_enhao.app"
+            BuildableName = "HealthByteBCBS.app"
             BlueprintName = "HealthByteBCBS"
             ReferencedContainer = "container:HealthByteBCBS.xcodeproj">
          </BuildableReference>

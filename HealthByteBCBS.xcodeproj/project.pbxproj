@@ -25,9 +25,7 @@
 		054B98E2173431910024BF56 /* MDMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054B98E1173431910024BF56 /* MDMapViewController.m */; };
 		054B98E4173431EE0024BF56 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054B98E3173431EE0024BF56 /* MapKit.framework */; };
 		056BC066173B7A3100643E17 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 056BC065173B7A3100643E17 /* QuartzCore.framework */; };
-		0587FC9E17378515003DF1E1 /* gray_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0587FC9D17378515003DF1E1 /* gray_cell.png */; };
 		0587FCA1173828CB003DF1E1 /* MDThirdCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0587FCA0173828CB003DF1E1 /* MDThirdCustomTableViewCell.m */; };
-		0587FCAA17384060003DF1E1 /* gray_cell_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0587FCA917384060003DF1E1 /* gray_cell_chart.png */; };
 		0587FCAD17386600003DF1E1 /* MDCustomSleepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0587FCAC17386600003DF1E1 /* MDCustomSleepView.m */; };
 		05A29BB617397D13004B4361 /* MDSleepEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A29BB517397D13004B4361 /* MDSleepEngine.m */; };
 		05A29BB917397D32004B4361 /* MDMoveEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A29BB817397D32004B4361 /* MDMoveEngine.m */; };
@@ -89,10 +87,8 @@
 		054B98E1173431910024BF56 /* MDMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMapViewController.m; sourceTree = "<group>"; };
 		054B98E3173431EE0024BF56 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		056BC065173B7A3100643E17 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0587FC9D17378515003DF1E1 /* gray_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_cell.png; sourceTree = SOURCE_ROOT; };
 		0587FC9F173828CA003DF1E1 /* MDThirdCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDThirdCustomTableViewCell.h; sourceTree = "<group>"; };
 		0587FCA0173828CB003DF1E1 /* MDThirdCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDThirdCustomTableViewCell.m; sourceTree = "<group>"; };
-		0587FCA917384060003DF1E1 /* gray_cell_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_cell_chart.png; sourceTree = SOURCE_ROOT; };
 		0587FCAB173865FF003DF1E1 /* MDCustomSleepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCustomSleepView.h; sourceTree = "<group>"; };
 		0587FCAC17386600003DF1E1 /* MDCustomSleepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCustomSleepView.m; sourceTree = "<group>"; };
 		05A29BB417397D13004B4361 /* MDSleepEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSleepEngine.h; sourceTree = "<group>"; };
@@ -171,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				054B98A81734294F0024BF56 /* Frameworks */,
-				054B98AF1734294F0024BF56 /* HealthPath */,
+				054B98AF1734294F0024BF56 /* HealthByte */,
 				0587FCA217383484003DF1E1 /* Images */,
 				054B98A71734294F0024BF56 /* Products */,
 			);
@@ -200,7 +196,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		054B98AF1734294F0024BF56 /* HealthPath */ = {
+		054B98AF1734294F0024BF56 /* HealthByte */ = {
 			isa = PBXGroup;
 			children = (
 				3CD29BE6173CA13000FB6427 /* columnChart */,
@@ -248,6 +244,7 @@
 				054B98D0173429500024BF56 /* second@2x.png */,
 				054B98B01734294F0024BF56 /* Supporting Files */,
 			);
+			name = HealthByte;
 			path = HealthPath;
 			sourceTree = "<group>";
 		};
@@ -281,8 +278,6 @@
 				05A29BD4173A4D3B004B4361 /* md_sleep_bg.png */,
 				05A29BD0173A4D26004B4361 /* water.png */,
 				05A937F6173D003200627A75 /* plate.png */,
-				0587FCA917384060003DF1E1 /* gray_cell_chart.png */,
-				0587FC9D17378515003DF1E1 /* gray_cell.png */,
 			);
 			name = Images;
 			path = HealthPath;
@@ -364,8 +359,6 @@
 				054B98CA173429500024BF56 /* first@2x.png in Resources */,
 				054B98CF173429500024BF56 /* second.png in Resources */,
 				054B98D1173429500024BF56 /* second@2x.png in Resources */,
-				0587FC9E17378515003DF1E1 /* gray_cell.png in Resources */,
-				0587FCAA17384060003DF1E1 /* gray_cell_chart.png in Resources */,
 				05A29BD1173A4D26004B4361 /* water.png in Resources */,
 				05A29BD5173A4D3B004B4361 /* md_eat_bg.png in Resources */,
 				05A29BD6173A4D3B004B4361 /* md_move_bg.png in Resources */,
