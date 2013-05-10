@@ -9,6 +9,8 @@
 #import "MDCustomDrawEatScoreBarView.h"
 
 #define BARHEIGHT 230
+#define BARWIDTH  70
+#define GUIDEWIDTH 3
 
 @implementation MDCustomDrawEatScoreBarView
 @synthesize barViewEatScore = _barViewEatScore;
@@ -32,17 +34,43 @@ static void drawEatBar(CGContextRef context, float x, float y, float h, CGColorR
     
     CGContextSaveGState(context);
     CGContextSetLineCap(context, kCGLineCapSquare);
-    CGContextSetLineWidth(context, 70);
-    
+
+    // white bar bg
+    CGContextSetLineWidth(context, BARWIDTH);
     CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
     CGContextMoveToPoint(context, startPoint.x, startPoint.y);
     CGContextAddLineToPoint(context, endPoint.x, y-BARHEIGHT);
     CGContextStrokePath(context);
 
+    // guide lines
+    CGContextSetLineWidth(context, GUIDEWIDTH);
+    CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, startPoint.y-BARHEIGHT - BARWIDTH/2);
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-BARHEIGHT- BARWIDTH/2);
+    CGContextStrokePath(context);
+
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, startPoint.y + BARWIDTH/2);
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y + BARWIDTH/2);
+    CGContextStrokePath(context);
+
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, (startPoint.y)-((BARHEIGHT)/2));
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-((BARHEIGHT)/2));
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, (startPoint.y)-(BARHEIGHT/4)+(BARWIDTH/4));
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-(BARHEIGHT/4)+(BARWIDTH/4));
+    CGContextStrokePath(context);
+
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, (startPoint.y)-(BARHEIGHT/4*3)-(BARWIDTH/4));
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-(BARHEIGHT/4*3)-(BARWIDTH/4));
+    CGContextStrokePath(context);
+    
     if (h <= 0) {
         CGContextRestoreGState(context);
         return;
     }
+    // bar itself
+    CGContextSetLineWidth(context, BARWIDTH);
     CGContextSetStrokeColorWithColor(context, color);
     CGContextMoveToPoint(context, startPoint.x, startPoint.y);
     CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
@@ -60,8 +88,8 @@ static void drawEatBar(CGContextRef context, float x, float y, float h, CGColorR
     int height = self.barViewEatScore/100.0*BARHEIGHT;
  
     // some tweaking adjust for line width
-    if (height < 70) {
-        height = height - 30;
+    if (height < BARWIDTH) {
+        height = height - BARWIDTH/2;
     } else {
         if (height < 150) {
             height = height - 40;

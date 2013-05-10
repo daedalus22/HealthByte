@@ -8,6 +8,8 @@
 
 #import "MDCustomDrawSleepScoreBarView.h"
 #define BARHEIGHT 230
+#define BARWIDTH  70
+#define GUIDEWIDTH 3
 
 @implementation MDCustomDrawSleepScoreBarView
 @synthesize barViewSleepScore = _barViewSleepScore;
@@ -22,24 +24,49 @@
 }
 
 static void drawEatBar(CGContextRef context, float x, float y, float h, CGColorRef color) {
-    
     CGPoint startPoint = CGPointMake(x, y);
     CGPoint endPoint = CGPointMake(x, y - h);
     
     
     CGContextSaveGState(context);
     CGContextSetLineCap(context, kCGLineCapSquare);
-    CGContextSetLineWidth(context, 70);
     
+    // white bar bg
+    CGContextSetLineWidth(context, BARWIDTH);
     CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
     CGContextMoveToPoint(context, startPoint.x, startPoint.y);
     CGContextAddLineToPoint(context, endPoint.x, y-BARHEIGHT);
+    CGContextStrokePath(context);
+    
+    // guide lines
+    CGContextSetLineWidth(context, GUIDEWIDTH);
+    CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, startPoint.y-BARHEIGHT - BARWIDTH/2);
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-BARHEIGHT- BARWIDTH/2);
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, startPoint.y + BARWIDTH/2);
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y + BARWIDTH/2);
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, (startPoint.y)-((BARHEIGHT)/2));
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-((BARHEIGHT)/2));
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, (startPoint.y)-(BARHEIGHT/4)+(BARWIDTH/4));
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-(BARHEIGHT/4)+(BARWIDTH/4));
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, startPoint.x - BARWIDTH/2 + GUIDEWIDTH/2, (startPoint.y)-(BARHEIGHT/4*3)-(BARWIDTH/4));
+    CGContextAddLineToPoint(context, startPoint.x + BARWIDTH/2 - GUIDEWIDTH/2, y-(BARHEIGHT/4*3)-(BARWIDTH/4));
     CGContextStrokePath(context);
     
     if (h <= 0) {
         CGContextRestoreGState(context);
         return;
     }
+    // bar itself
+    CGContextSetLineWidth(context, BARWIDTH);
     CGContextSetStrokeColorWithColor(context, color);
     CGContextMoveToPoint(context, startPoint.x, startPoint.y);
     CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
