@@ -332,7 +332,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view alpha="0.60000000000000009" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="za2-aQ-JN9" customClass="MDCustomCorrView">
+                                                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="za2-aQ-JN9" customClass="MDCustomCorrView">
                                                     <subviews>
                                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo8-Xe-jW4">
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -426,7 +426,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view alpha="0.60000000000000009" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-9w-V1k" customClass="MDCustomMoveView">
+                                                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-9w-V1k" customClass="MDCustomMoveView">
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MOVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRy-Mj-PGc">
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -438,16 +438,20 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Steps: 865" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-ud-k9A">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
+                                                        <constraint firstItem="bjD-ud-k9A" firstAttribute="top" secondItem="SHo-9w-V1k" secondAttribute="top" constant="32" id="CFm-F8-E9a"/>
                                                         <constraint firstItem="MRy-Mj-PGc" firstAttribute="top" secondItem="SHo-9w-V1k" secondAttribute="top" constant="3" id="pjT-D0-GUm"/>
+                                                        <constraint firstItem="bjD-ud-k9A" firstAttribute="leading" secondItem="SHo-9w-V1k" secondAttribute="leading" constant="27" id="tAy-Z1-EYo"/>
                                                         <constraint firstItem="MRy-Mj-PGc" firstAttribute="leading" secondItem="SHo-9w-V1k" secondAttribute="leading" constant="3" id="zW8-46-VpG"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="mad-Bi-iSo" appends="YES" id="skt-xH-gia"/>
-                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -530,11 +534,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5u6-v5-tAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="mad-Bi-iSo">
-                    <connections>
-                        <segue destination="ztr-Wx-jQM" kind="modal" id="CQv-yI-rzr"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="6ly-mw-ohn">
                     <connections>
                         <action selector="veggieConsumed:" destination="Vbw-p0-rcj" id="9ag-32-SWO"/>
@@ -769,15 +768,9 @@
         </class>
         <class className="MDFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>

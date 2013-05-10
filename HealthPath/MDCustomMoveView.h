@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MDCustomMoveView : UIView
+#import "MDMoveEngine.h"
+#import "MDMoveData.h"
+
+@interface MDCustomMoveView : UIView <SChartDelegate>
+@property (strong, nonatomic) ShinobiChart *moveChart;
+@property (strong, nonatomic) MDMoveEngine *moveEngine;
+@property (strong, nonatomic) MDMoveData *moveData;
 
 @end

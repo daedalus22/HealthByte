@@ -62,6 +62,10 @@
 		3CD29C76173CDA0800FB6427 /* sleep-azumio2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 3CD29C74173CDA0800FB6427 /* sleep-azumio2.PNG */; };
 		3CD29C77173CDA0800FB6427 /* sleep_azumio_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD29C75173CDA0800FB6427 /* sleep_azumio_small.png */; };
 		3CD29C7B173D7E3400FB6427 /* sleep_azumio_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD29C7A173D7E3400FB6427 /* sleep_azumio_share.png */; };
+		ADC9A284173DA8C900051ED0 /* ShinobiChart+trialChart.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A283173DA8C900051ED0 /* ShinobiChart+trialChart.m */; };
+		ADC9A28A173DA8DA00051ED0 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A286173DA8DA00051ED0 /* CHCSVParser.m */; };
+		ADC9A28C173DA8DA00051ED0 /* MDMoveData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A289173DA8DA00051ED0 /* MDMoveData.m */; };
+		ADC9A28F173DAB7100051ED0 /* movedata.csv in Resources */ = {isa = PBXBuildFile; fileRef = ADC9A28E173DAB7100051ED0 /* movedata.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +150,13 @@
 		3CD29C74173CDA0800FB6427 /* sleep-azumio2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sleep-azumio2.PNG"; sourceTree = "<group>"; };
 		3CD29C75173CDA0800FB6427 /* sleep_azumio_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep_azumio_small.png; sourceTree = "<group>"; };
 		3CD29C7A173D7E3400FB6427 /* sleep_azumio_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep_azumio_share.png; sourceTree = "<group>"; };
+		ADC9A282173DA8C900051ED0 /* ShinobiChart+trialChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShinobiChart+trialChart.h"; sourceTree = "<group>"; };
+		ADC9A283173DA8C900051ED0 /* ShinobiChart+trialChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShinobiChart+trialChart.m"; sourceTree = "<group>"; };
+		ADC9A285173DA8DA00051ED0 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		ADC9A286173DA8DA00051ED0 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		ADC9A288173DA8DA00051ED0 /* MDMoveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMoveData.h; sourceTree = "<group>"; };
+		ADC9A289173DA8DA00051ED0 /* MDMoveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMoveData.m; sourceTree = "<group>"; };
+		ADC9A28E173DAB7100051ED0 /* movedata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movedata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +214,9 @@
 		054B98AF1734294F0024BF56 /* HealthByte */ = {
 			isa = PBXGroup;
 			children = (
+				ADC9A28D173DA8F300051ED0 /* Models */,
+				ADC9A282173DA8C900051ED0 /* ShinobiChart+trialChart.h */,
+				ADC9A283173DA8C900051ED0 /* ShinobiChart+trialChart.m */,
 				3CD29BE6173CA13000FB6427 /* columnChart */,
 				05A937EC173CEE6800627A75 /* MDCustomDrawEatScoreBarView.h */,
 				05A937ED173CEE6800627A75 /* MDCustomDrawEatScoreBarView.m */,
@@ -304,6 +318,18 @@
 			name = columnChart;
 			sourceTree = "<group>";
 		};
+		ADC9A28D173DA8F300051ED0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADC9A28E173DAB7100051ED0 /* movedata.csv */,
+				ADC9A285173DA8DA00051ED0 /* CHCSVParser.h */,
+				ADC9A286173DA8DA00051ED0 /* CHCSVParser.m */,
+				ADC9A288173DA8DA00051ED0 /* MDMoveData.h */,
+				ADC9A289173DA8DA00051ED0 /* MDMoveData.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,6 +406,7 @@
 				05A937F7173D003200627A75 /* plate.png in Resources */,
 				3CD29C7B173D7E3400FB6427 /* sleep_azumio_share.png in Resources */,
 				0500C067173D943200070F15 /* circle_of_loved_ones.png in Resources */,
+				ADC9A28F173DAB7100051ED0 /* movedata.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +440,9 @@
 				05A937F0173CEE6900627A75 /* MDCustomDrawEatScoreBarView.m in Sources */,
 				05A937F1173CEE6900627A75 /* MDCustomDrawMoveScoreBarView.m in Sources */,
 				05A937FA173D01CB00627A75 /* MDCustomDrawSleepScoreBarView.m in Sources */,
+				ADC9A284173DA8C900051ED0 /* ShinobiChart+trialChart.m in Sources */,
+				ADC9A28A173DA8DA00051ED0 /* CHCSVParser.m in Sources */,
+				ADC9A28C173DA8DA00051ED0 /* MDMoveData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

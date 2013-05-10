@@ -7,6 +7,7 @@
 //
 
 #import "MDMoveEngine.h"
+#import "ShinobiChart+trialChart.h"
 
 @interface MDMoveEngine () {
     bool taskRunning;
@@ -21,10 +22,10 @@
     self = [super init];
     
     self.ctrlrDelegate = delegate;
-
+    
     // perform other initialization here. start task loop if necessary
     NSLog(@"Move Engine initialized");
-
+    
     return self;
     
     return self;
@@ -73,5 +74,65 @@
             return nil;
     }
 }
+
+#pragma mark - SChartDatasource
+
+- (NSString *)dataTypeForIndex:(int)index
+{
+    NSString *title = nil;
+    switch (index) {
+        case 0:
+            title = @"totalmove";
+            break;
+        case 1:
+            title = @"move";
+            break;
+        default:
+            break;
+    }
+    return title;
+}
+
+- (NSString *)figureTypeForIndex:(int)index
+{
+    NSString *type = nil;
+    switch (index) {
+        case 0:
+            type = @"area_blue";
+            break;
+        case 1:
+            type = @"area_orange";
+            break;
+            
+        default:
+            break;
+    }
+    return type;
+}
+
+- (int)numberOfSeriesInSChart:(ShinobiChart *)chart
+{
+    return [_moveData dataKeys].count;
+}
+
+- (SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(int)index
+{
+    return [chart dataSeriesForType:[self figureTypeForIndex:index] withTitle:[self dataTypeForIndex:index]];
+}
+
+- (int)sChart:(ShinobiChart *)chart numberOfDataPointsForSeriesAtIndex:(int)seriesIndex
+{
+    return [_moveData times].count;
+}
+
+- (id<SChartData>)sChart:(ShinobiChart *)chart dataPointAtIndex:(int)dataIndex forSeriesAtIndex:(int)seriesIndex
+{
+    SChartDataPoint *dp = [SChartDataPoint new];
+    dp.xValue = [[_moveData times] objectAtIndex:dataIndex];
+    dp.yValue = [[[_moveData data] objectForKey:dp.xValue] objectForKey:[self dataTypeForIndex:seriesIndex]];
+    return dp;
+}
+
+
 
 @end

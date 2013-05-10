@@ -35,3 +35,13 @@ typedef enum MDTimePeriod_  {
 -(NSArray *) dataSetFor:(MDTimePeriod)period;
 
 @end
+
+@protocol MoveData <NSObject>
+
+@required
+- (NSMutableArray *) times;
+- (NSMutableArray *) dataKeys;
+- (NSMutableDictionary *) data;
+
+@end
+

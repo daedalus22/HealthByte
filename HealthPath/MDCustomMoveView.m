@@ -7,6 +7,7 @@
 //
 
 #import "MDCustomMoveView.h"
+#import "ShinobiChart+trialChart.h"
 
 @implementation MDCustomMoveView
 
@@ -35,6 +36,32 @@ void drawMoveBox(CGContextRef context, CGRect rect) {
     CGRect paperRect = self.bounds;
     drawMoveBox(context, paperRect);
     
+    ShinobiChart *chart = [ShinobiChart chartWithFrame:self.bounds];
+    SChartCategoryAxis *xAxis = [SChartCategoryAxis new];
+    xAxis.title = @"Hours";
+    xAxis.style.majorGridLineStyle.showMajorGridLines = NO;
+    xAxis.style.majorTickStyle.tickLabelOrientation = TickLabelOrientationHorizontal;
+    xAxis.enableGesturePanning = YES;
+    chart.xAxis = xAxis;
+    
+    SChartNumberRange *yAxisRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:299]];
+    SChartNumberAxis *yAxis = [[SChartNumberAxis alloc] initWithRange:yAxisRange];
+    //    yAxis.title = @"MovementIndex";
+    yAxis.axisPosition =  SChartAxisPositionReverse;
+    yAxis.style.majorGridLineStyle.showMajorGridLines = YES;
+    chart.yAxis = yAxis;
+    
+    chart.backgroundColor = [UIColor clearColor];
+    chart.plotAreaBackgroundColor = [UIColor clearColor];
+    chart.alpha = 1;
+    
+    _moveChart = chart;
+    _moveEngine = [[MDMoveEngine alloc] init];
+    _moveData = [MDMoveData new];
+    _moveEngine.moveData = _moveData;
+    _moveChart.datasource = _moveEngine;
+    _moveChart.delegate = self;
+    [self addSubview:_moveChart];
 }
 
 

@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "MDEngineProtocol.h"
+#import <ShinobiCharts/ShinobiChart.h>
 
-@interface MDMoveEngine : NSObject
+
+@interface MDMoveEngine : NSObject <SChartDatasource>
 
 @property (weak, nonatomic) id ctrlrDelegate;
+@property (nonatomic) id<MoveData> moveData;
 
 -(id) initWithDelegate:(id)delegate;
 -(void) start;
