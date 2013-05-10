@@ -382,11 +382,11 @@
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sleep_azumio_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="tHO-fH-cRv"/>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="511-U9-LRo">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="511-U9-LRo">
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                            <state key="normal" title="Button">
+                                                            <state key="normal">
                                                                 <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                             </state>
                                                             <state key="highlighted">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -401,11 +401,11 @@
                                                         <constraint firstItem="tHO-fH-cRv" firstAttribute="bottom" secondItem="mtS-Bp-t4X" secondAttribute="bottom" type="default" id="6rp-hd-swk"/>
                                                         <constraint firstItem="tHO-fH-cRv" firstAttribute="trailing" secondItem="mtS-Bp-t4X" secondAttribute="trailing" type="default" id="A3O-TY-U7i"/>
                                                         <constraint firstItem="tHO-fH-cRv" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" type="default" id="HNY-uN-sGI"/>
-                                                        <constraint firstItem="511-U9-LRo" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" constant="1" id="L3K-le-QqK"/>
                                                         <constraint firstItem="W7H-RM-KkV" firstAttribute="baseline" secondItem="511-U9-LRo" secondAttribute="baseline" type="default" id="Oq5-aU-Jxn"/>
                                                         <constraint firstItem="tHO-fH-cRv" firstAttribute="leading" secondItem="mtS-Bp-t4X" secondAttribute="leading" type="default" id="SW8-ne-qAt"/>
-                                                        <constraint firstAttribute="trailing" secondItem="511-U9-LRo" secondAttribute="trailing" constant="7" id="eUg-aC-wmZ"/>
                                                         <constraint firstItem="W7H-RM-KkV" firstAttribute="leading" secondItem="mtS-Bp-t4X" secondAttribute="leading" constant="3" id="pzL-tM-86m"/>
+                                                        <constraint firstAttribute="trailing" secondItem="511-U9-LRo" secondAttribute="trailing" constant="9" id="vjv-fz-3Od"/>
+                                                        <constraint firstItem="511-U9-LRo" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" constant="6" id="zhI-bq-s93"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -770,9 +770,6 @@
         </class>
         <class className="MDFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
@@ -819,6 +816,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QqJ-QO-D23"/>
+        <segue reference="nzO-P7-LEw"/>
     </inferredMetricsTieBreakers>
 </document>
