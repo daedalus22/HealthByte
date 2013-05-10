@@ -599,7 +599,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sleep-azumio.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="QEY-lr-XBh">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="567" id="WpK-Bl-wh7"/>
+                                    <constraint firstAttribute="height" constant="567" id="Dok-PJ-gck"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8X-ef-jrq">
@@ -640,13 +640,13 @@
                         <constraints>
                             <constraint firstItem="VCC-Xe-fN1" firstAttribute="bottom" secondItem="R8X-ef-jrq" secondAttribute="bottom" type="default" id="7kY-qA-fiv"/>
                             <constraint firstItem="QEY-lr-XBh" firstAttribute="trailing" secondItem="j6k-I4-y0m" secondAttribute="trailing" type="default" id="9iK-dz-gEl"/>
-                            <constraint firstItem="VCC-Xe-fN1" firstAttribute="baseline" secondItem="R8X-ef-jrq" secondAttribute="baseline" type="default" id="Hly-Kn-BPk"/>
                             <constraint firstAttribute="bottom" secondItem="R8X-ef-jrq" secondAttribute="bottom" constant="91" id="InI-nM-xww"/>
                             <constraint firstAttribute="trailing" secondItem="VCC-Xe-fN1" secondAttribute="trailing" constant="25" id="Ly3-dF-7Nc"/>
                             <constraint firstItem="R8X-ef-jrq" firstAttribute="leading" secondItem="j6k-I4-y0m" secondAttribute="leading" constant="69" id="hD2-O1-YZU"/>
+                            <constraint firstItem="QEY-lr-XBh" firstAttribute="bottom" secondItem="j6k-I4-y0m" secondAttribute="bottom" type="default" id="iMI-Ur-2Jm"/>
+                            <constraint firstItem="R8X-ef-jrq" firstAttribute="baseline" secondItem="VCC-Xe-fN1" secondAttribute="baseline" type="default" id="qCX-pv-rE2"/>
                             <constraint firstItem="VCC-Xe-fN1" firstAttribute="top" secondItem="R8X-ef-jrq" secondAttribute="top" type="default" id="rcM-x5-OiX"/>
                             <constraint firstItem="QEY-lr-XBh" firstAttribute="leading" secondItem="j6k-I4-y0m" secondAttribute="leading" type="default" id="w61-kf-rai"/>
-                            <constraint firstItem="QEY-lr-XBh" firstAttribute="bottom" secondItem="j6k-I4-y0m" secondAttribute="bottom" type="default" id="xkk-NM-WP0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -773,9 +773,6 @@
         </class>
         <class className="MDSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>

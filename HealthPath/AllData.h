@@ -11,6 +11,7 @@
 #define eat @"Eat"
 #define move @"Move"
 #define sleep @"Sleep"
+#define step @"Step"
 #define minmove @"minmove"
 #define maxmove @"maxmove"
 //#define maxTemp @"max_temp"

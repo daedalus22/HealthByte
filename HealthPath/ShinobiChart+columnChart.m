@@ -36,24 +36,25 @@
     SChartCategoryAxis *xAxis = [SChartCategoryAxis new];
     xAxis.title = @"Time";
     xAxis.style.majorGridLineStyle.showMajorGridLines = NO;
-    xAxis.style.majorTickStyle.tickLabelOrientation = TickLabelOrientationVertical;
+    xAxis.style.majorTickStyle.tickLabelOrientation = TickLabelOrientationDiagonal;
+
     chart.xAxis = xAxis;
     
     //Our chart will have two y-axis - one on left and one on right
     
     //Setup rainfall y-axis on left of chart
-    SChartNumberRange *sleepRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:30]];
+    SChartNumberRange *sleepRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:12]];
     SChartNumberAxis *sleepAxis = [[SChartNumberAxis alloc] initWithRange:sleepRange];
     sleepAxis.title = @"Sleep Time (hour)";
     sleepAxis.style.majorGridLineStyle.showMajorGridLines = NO;
     chart.yAxis = sleepAxis;
     
     //setup temperature y-axis on right of chart
-    SChartNumberRange *moveRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:30]];
+    SChartNumberRange *moveRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:3000]];
     SChartNumberAxis *moveAxis = [[SChartNumberAxis alloc] initWithRange:moveRange];
     moveAxis.title = [NSString stringWithFormat:@"Activity Time (%@C)",@"hour"];
     moveAxis.axisPosition = SChartAxisPositionReverse;
-    moveAxis.style.majorGridLineStyle.showMajorGridLines = NO;
+    moveAxis.style.majorGridLineStyle.showMajorGridLines = YES;
     [chart addYAxis: moveAxis];
     
     if (iPad) {
@@ -71,9 +72,9 @@
     if ([key isEqualToString:sleep]) {
         title = @"Sleep Time";
     } else if ([key isEqualToString:minmove] || [key isEqualToString:maxmove]) {
-        title = @"Move Range";
+        title = @"Steps Per Day";
     } else if ([key isEqualToString:move]) {
-        title = @"Move Avg.";
+        title = @"Move Duration";
     } else if ([key isEqualToString:eat]) {
         title = @"Eat Amount";
     }

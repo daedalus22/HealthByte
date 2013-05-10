@@ -61,16 +61,17 @@
     
     if ([[self keyForIndex:seriesIndex] isEqualToString:eat]) {
         // we use the data value for the radius - this value is presentation only
-        dp.yValue = [NSNumber numberWithInt:20];
+        dp.yValue = [NSNumber numberWithInt:2000];
         
     } else if ([[self keyForIndex:seriesIndex] isEqualToString:maxmove]) {
     
-        dp.yValue = [NSNumber numberWithFloat:6.0f];
+        NSNumber *value = [[[_alldata data] objectForKey:dp.xValue] objectForKey:step];
+        dp.yValue =value;
+
     } else if ([[self keyForIndex:seriesIndex] isEqualToString:minmove]) {
         
         // max temp is stacked on top of min temp. - remove the min temp offset
-        NSNumber *value = [[[_alldata data] objectForKey:dp.xValue] objectForKey:move];
-        dp.yValue = [NSNumber numberWithFloat:value.floatValue-3];
+        dp.yValue =         [NSNumber numberWithFloat:0.0f];
 
     } else {
         dp.yValue = [[[_alldata data] objectForKey:dp.xValue] objectForKey:[self keyForIndex:seriesIndex]];
