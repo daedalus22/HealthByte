@@ -13,7 +13,8 @@ typedef enum MDCustomTableViewCellRow_  {
     MD_CORRELATION_CELL,
     MD_SLEEP_CELL,
     MD_MOVE_CELL,
-    MD_EAT_CELL,
+//    MD_EAT_CELL,
+    MD_SHARE_CELL,
     MD_NUM_ROWS // keep this the last in the enumeration. This should match Storyboard TableView section!!
 } MDCustomTableViewCellRow;
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0500C067173D943200070F15 /* circle_of_loved_ones.png in Resources */ = {isa = PBXBuildFile; fileRef = 0500C066173D943200070F15 /* circle_of_loved_ones.png */; };
 		054B98AA1734294F0024BF56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054B98A91734294F0024BF56 /* UIKit.framework */; };
 		054B98AC1734294F0024BF56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054B98AB1734294F0024BF56 /* Foundation.framework */; };
 		054B98AE1734294F0024BF56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054B98AD1734294F0024BF56 /* CoreGraphics.framework */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0500C066173D943200070F15 /* circle_of_loved_ones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle_of_loved_ones.png; path = ../circle_of_loved_ones.png; sourceTree = "<group>"; };
 		054B98A61734294F0024BF56 /* HealthByteBCBS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthByteBCBS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		054B98A91734294F0024BF56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		054B98AB1734294F0024BF56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -267,6 +269,7 @@
 		0587FCA217383484003DF1E1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0500C066173D943200070F15 /* circle_of_loved_ones.png */,
 				3CD29C7A173D7E3400FB6427 /* sleep_azumio_share.png */,
 				05A937F2173CF0F200627A75 /* md_friend_mockup.png */,
 				05A937F3173CF0F200627A75 /* md_settings_mockup.png */,
@@ -376,6 +379,7 @@
 				05A937F5173CF0F200627A75 /* md_settings_mockup.png in Resources */,
 				05A937F7173D003200627A75 /* plate.png in Resources */,
 				3CD29C7B173D7E3400FB6427 /* sleep_azumio_share.png in Resources */,
+				0500C067173D943200070F15 /* circle_of_loved_ones.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

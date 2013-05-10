@@ -345,6 +345,9 @@
     if (indexPath.row == MD_CORRELATION_CELL) {
         return 300;
     }
+    if (indexPath.row == MD_SHARE_CELL) {
+        return 320;
+    }
     CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
     if (iOSDeviceScreenSize.height == 480)
     {
