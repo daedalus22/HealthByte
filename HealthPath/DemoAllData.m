@@ -42,7 +42,7 @@
                 case 0:
                     data_eat=10.0f;data_move=11.0f;data_sleep=7.0f;break;
                 case 1:
-                    data_eat=7.0f;data_move=12.2f;data_sleep=6.0f;break;
+                    data_eat=7.0f;data_move=12.2f;data_sleep=4.0f;break;
                 case 2:
                     data_eat=6.0f;data_move=12.1f;data_sleep=6.5f;break;
                 case 3:
