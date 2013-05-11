@@ -62,11 +62,6 @@
         chart.legend.position = SChartLegendPositionBottomMiddle;
         chart.legend.placement = SChartLegendPlacementOutsidePlotArea;
     }
-    else{
-        chart.legend.hidden = NO;
-        chart.legend.position = SChartLegendPositionBottomMiddle;
-        chart.legend.placement = SChartLegendPlacementOutsidePlotArea;
-    }
     
     return chart;
 }
@@ -75,13 +70,13 @@
     NSString *title = nil;
     
     if ([key isEqualToString:sleep]) {
-        title = @"Sleep";
+        title = @"Sleep Time";
     } else if ([key isEqualToString:minmove] || [key isEqualToString:maxmove]) {
-        title = @"Steps";
+        title = @"Steps Per Day";
     } else if ([key isEqualToString:move]) {
-        title = @"Activity";
+        title = @"Move Duration";
     } else if ([key isEqualToString:eat]) {
-        title = @"Eat";
+        title = @"Eat Amount";
     }
     return title;
 }
