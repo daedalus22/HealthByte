@@ -82,10 +82,10 @@
     NSString *title = nil;
     switch (index) {
         case 0:
-            title = @"totalmove";
+            title = @"stay";
             break;
         case 1:
-            title = @"move";
+            title = @"act";
             break;
         default:
             break;
@@ -98,10 +98,10 @@
     NSString *type = nil;
     switch (index) {
         case 0:
-            type = @"area_blue";
+            type = @"area_yellow";
             break;
         case 1:
-            type = @"area_orange";
+            type = @"col_green";
             break;
             
         default:

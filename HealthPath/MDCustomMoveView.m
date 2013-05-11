@@ -42,15 +42,20 @@ void drawMoveBox(CGContextRef context, CGRect rect) {
     xAxis.style.majorGridLineStyle.showMajorGridLines = NO;
     xAxis.style.majorTickStyle.tickLabelOrientation = TickLabelOrientationHorizontal;
     xAxis.enableGesturePanning = YES;
+    xAxis.enableGesturePanning = YES;
+    xAxis.enableMomentumPanning = YES;
+    xAxis.enableMomentumZooming = YES;
     chart.xAxis = xAxis;
     
-    SChartNumberRange *yAxisRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:299]];
+    SChartNumberRange *yAxisRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:101]];
     SChartNumberAxis *yAxis = [[SChartNumberAxis alloc] initWithRange:yAxisRange];
     //    yAxis.title = @"MovementIndex";
     yAxis.axisPosition =  SChartAxisPositionReverse;
     yAxis.style.majorGridLineStyle.showMajorGridLines = YES;
     chart.yAxis = yAxis;
-    
+    chart.legend.hidden = NO;
+    chart.legend.position = SChartLegendPositionBottomMiddle;
+    chart.legend.placement = SChartLegendPlacementOutsidePlotArea;
     chart.backgroundColor = [UIColor clearColor];
 //    chart.plotAreaBackgroundColor = [UIColor clearColor];
     chart.alpha = 1;
