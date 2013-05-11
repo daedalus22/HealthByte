@@ -58,8 +58,17 @@
         lineSeries.animationEnabled = YES;
         series = lineSeries;
         
-    }
-    else if ([type isEqualToString:@"scatter"]) {
+    } else if ([type isEqualToString:@"area_yellow"]) {
+        SChartLineSeries *lineSeries = [SChartLineSeries new];
+        lineSeries.style = [self.theme lineSeriesStyleForSeriesAtIndex:4 selected:NO];
+        lineSeries.style.showFill = YES;
+        lineSeries.baseline = @0;
+        lineSeries.title = title;
+        lineSeries.entryAnimation = [SChartAnimation growVerticalAnimation];
+        lineSeries.animationEnabled = YES;
+        series = lineSeries;
+        
+    } else if ([type isEqualToString:@"scatter"]) {
         SChartScatterSeries *scatterSeries = [SChartScatterSeries new];
         scatterSeries.title = title;
         scatterSeries.style = [self.theme scatterSeriesStyleForSeriesAtIndex:4 selected:NO];

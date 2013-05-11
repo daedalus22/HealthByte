@@ -7,6 +7,7 @@
 //
 
 #import "MDCustomSleepView.h"
+#import "ShinobiChart+trialChart.h"
 
 @implementation MDCustomSleepView
 
@@ -100,5 +101,31 @@ void drawBezierCurve(CGContextRef context) {
     // drawLinearGradient(context, paperRect, whiteColor.CGColor, lightGrayColor.CGColor);
     drawBox(context, paperRect);
     // drawLine(context, paperRect);
+    ShinobiChart *chart = [ShinobiChart chartWithFrame:self.bounds];
+    SChartCategoryAxis *xAxis = [SChartCategoryAxis new];
+    xAxis.title = @"Hours";
+    xAxis.style.majorGridLineStyle.showMajorGridLines = NO;
+    xAxis.style.majorTickStyle.tickLabelOrientation = TickLabelOrientationHorizontal;
+    xAxis.enableGesturePanning = YES;
+    chart.xAxis = xAxis;
+    
+    SChartNumberRange *yAxisRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:99]];
+    SChartNumberAxis *yAxis = [[SChartNumberAxis alloc] initWithRange:yAxisRange];
+    //    yAxis.title = @"MovementIndex";
+    yAxis.axisPosition =  SChartAxisPositionReverse;
+    yAxis.style.majorGridLineStyle.showMajorGridLines = YES;
+    chart.yAxis = yAxis;
+    
+    chart.backgroundColor = [UIColor clearColor];
+    chart.plotAreaBackgroundColor = [UIColor clearColor];
+    chart.alpha = 1;
+    
+    _sleepChart = chart;
+    _sleepEngine = [[MDSleepEngine alloc] init];
+    _sleepData = [MDSleepData new];
+    _sleepEngine.sleepData = _sleepData;
+    _sleepChart.datasource = _sleepEngine;
+    _sleepChart.delegate = self;
+    [self addSubview:_sleepChart];
 }
 @end

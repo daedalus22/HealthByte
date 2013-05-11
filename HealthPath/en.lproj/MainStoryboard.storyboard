@@ -369,7 +369,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view alpha="0.60000000000000009" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtS-Bp-t4X" customClass="MDCustomSleepView">
+                                                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtS-Bp-t4X" customClass="MDCustomSleepView">
                                                     <subviews>
                                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SLEEP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7H-RM-KkV">
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -381,7 +381,6 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sleep_azumio_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="tHO-fH-cRv"/>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="511-U9-LRo">
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <state key="normal">
@@ -398,11 +397,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="tHO-fH-cRv" firstAttribute="bottom" secondItem="mtS-Bp-t4X" secondAttribute="bottom" type="default" id="6rp-hd-swk"/>
-                                                        <constraint firstItem="tHO-fH-cRv" firstAttribute="trailing" secondItem="mtS-Bp-t4X" secondAttribute="trailing" type="default" id="A3O-TY-U7i"/>
-                                                        <constraint firstItem="tHO-fH-cRv" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" type="default" id="HNY-uN-sGI"/>
                                                         <constraint firstItem="W7H-RM-KkV" firstAttribute="baseline" secondItem="511-U9-LRo" secondAttribute="baseline" type="default" id="Oq5-aU-Jxn"/>
-                                                        <constraint firstItem="tHO-fH-cRv" firstAttribute="leading" secondItem="mtS-Bp-t4X" secondAttribute="leading" type="default" id="SW8-ne-qAt"/>
                                                         <constraint firstItem="W7H-RM-KkV" firstAttribute="leading" secondItem="mtS-Bp-t4X" secondAttribute="leading" constant="3" id="pzL-tM-86m"/>
                                                         <constraint firstAttribute="trailing" secondItem="511-U9-LRo" secondAttribute="trailing" constant="9" id="vjv-fz-3Od"/>
                                                         <constraint firstItem="511-U9-LRo" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" constant="6" id="zhI-bq-s93"/>
@@ -792,7 +787,6 @@
         <image name="second.png" width="30" height="30"/>
         <image name="sleep-azumio.PNG" width="640" height="960"/>
         <image name="sleep_azumio_share.png" width="631" height="899"/>
-        <image name="sleep_azumio_small.png" width="573" height="279"/>
         <image name="star.png" width="43" height="41"/>
         <image name="water.png" width="38" height="36"/>
     </resources>

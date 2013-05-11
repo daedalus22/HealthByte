@@ -80,10 +80,16 @@
     NSString *title = nil;
     switch (index) {
         case 0:
-            title = @"totalmove";
+            title = @"Wake";
             break;
         case 1:
-            title = @"move";
+            title = @"Rem";
+            break;
+        case 2:
+            title = @"Light";
+            break;
+        case 3:
+            title = @"Deep";
             break;
         default:
             break;
@@ -96,11 +102,18 @@
     NSString *type = nil;
     switch (index) {
         case 0:
-            type = @"area_blue";
+            type = @"area_yellow";
             break;
         case 1:
             type = @"area_orange";
             break;
+        case 2:
+            type = @"area_green";
+            break;
+        case 3:
+            type = @"area_blue";
+            break;
+        
             
         default:
             break;
@@ -111,7 +124,7 @@
 
 - (int)numberOfSeriesInSChart:(ShinobiChart *)chart
 {
-    return [_moveData dataKeys].count;
+    return [_sleepData dataKeys].count;
 }
 
 - (SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(int)index
@@ -121,14 +134,14 @@
 
 - (int)sChart:(ShinobiChart *)chart numberOfDataPointsForSeriesAtIndex:(int)seriesIndex
 {
-    return [_moveData times].count;
+    return [_sleepData times].count;
 }
 
 - (id<SChartData>)sChart:(ShinobiChart *)chart dataPointAtIndex:(int)dataIndex forSeriesAtIndex:(int)seriesIndex
 {
     SChartDataPoint *dp = [SChartDataPoint new];
-    dp.xValue = [[_moveData times] objectAtIndex:dataIndex];
-    dp.yValue = [[[_moveData data] objectForKey:dp.xValue] objectForKey:[self dataTypeForIndex:seriesIndex]];
+    dp.xValue = [[_sleepData times] objectAtIndex:dataIndex];
+    dp.yValue = [[[_sleepData data] objectForKey:dp.xValue] objectForKey:[self dataTypeForIndex:seriesIndex]];
     return dp;
 }
 

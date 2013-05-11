@@ -11,10 +11,10 @@
 #import <ShinobiCharts/ShinobiChart.h>
 
 
-@interface MDSleepEngine : NSObject
+@interface MDSleepEngine : NSObject <SChartDatasource>
 
 @property (weak, nonatomic) id ctrlrDelegate;
-@property (nonatomic) id<MoveData> moveData;
+@property (nonatomic) id<SleepData> sleepData;
 
 
 -(id) initWithDelegate:(id)delegate;
