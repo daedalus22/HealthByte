@@ -454,9 +454,9 @@
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
-                                                        <constraint firstItem="bjD-ud-k9A" firstAttribute="top" secondItem="SHo-9w-V1k" secondAttribute="top" constant="32" id="CFm-F8-E9a"/>
+                                                        <constraint firstItem="bjD-ud-k9A" firstAttribute="top" secondItem="SHo-9w-V1k" secondAttribute="top" constant="7" id="10X-Nv-boS"/>
                                                         <constraint firstItem="MRy-Mj-PGc" firstAttribute="top" secondItem="SHo-9w-V1k" secondAttribute="top" constant="3" id="pjT-D0-GUm"/>
-                                                        <constraint firstItem="bjD-ud-k9A" firstAttribute="leading" secondItem="SHo-9w-V1k" secondAttribute="leading" constant="27" id="tAy-Z1-EYo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bjD-ud-k9A" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vh0-Ud-8jq"/>
                                                         <constraint firstItem="MRy-Mj-PGc" firstAttribute="leading" secondItem="SHo-9w-V1k" secondAttribute="leading" constant="3" id="zW8-46-VpG"/>
                                                     </constraints>
                                                 </view>
@@ -838,10 +838,6 @@
         </class>
         <class className="MDSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterInfo:"/>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>
