@@ -36,5 +36,11 @@
 - (IBAction)enterback:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];  
 }
+- (IBAction)dismissSegue:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)dismissSegue2:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil]; 
+}
 
 @end

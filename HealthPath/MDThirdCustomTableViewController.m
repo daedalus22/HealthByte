@@ -18,6 +18,7 @@
 #import "MDCustomEatView.h"
 #import "MDCustomMoveView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "GRAlertView.h"
 
 
 @interface MDThirdCustomTableViewController () {
@@ -176,7 +177,7 @@
 
     // TODO
     // settings
-    settings = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"John", @"name", @"hgraph", @"displaymode", @"Fitbit", @"tracking device", @"yes", @"sharing", nil];
+    settings = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Sara", @"name", @"hgraph", @"displaymode", @"Fitbit", @"tracking device", @"yes", @"sharing", nil];
     stars = 0;
     curGraphKind = MD_BAR_EAT;
     
@@ -712,4 +713,42 @@
     }
 }
 
+- (IBAction)drinkAlertView:(id)sender {
+    GRAlertView *alert = [[GRAlertView alloc] initWithTitle:@"Encouragement"
+                                                    message:@"A couple more waters to go!"
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
+    alert.style = GRAlertStyleSuccess;            // set UIAlertView style
+    alert.animation = GRAlertAnimationLines;    // set animation type
+    [alert setImage:@"accept.png"];              // add icon image
+    [alert show];
+    
+}
+
+- (IBAction)sleepAlertView:(id)sender {
+    GRAlertView *alert = [[GRAlertView alloc] initWithTitle:@"Alert"
+                                                    message:@"Sleep no less than 6 hours!"
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
+    alert.style = GRAlertStyleAlert;            // set UIAlertView style
+    alert.animation = GRAlertAnimationLines;    // set animation type
+    [alert setImage:@"alert.png"];              // add icon image
+    [alert show];
+    
+}
+
+- (IBAction)moveAlertView:(id)sender {
+    GRAlertView *alert = [[GRAlertView alloc] initWithTitle:@"Alert"
+                                                    message:@"Move around a bit every 4+ hours!"
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
+    alert.style = GRAlertStyleAlert;            // set UIAlertView style
+    alert.animation = GRAlertAnimationLines;    // set animation type
+    [alert setImage:@"alert.png"];              // add icon image
+    [alert show];
+    
+}
 @end
