@@ -42,7 +42,7 @@ void drawMoveBox(CGContextRef context, CGRect rect) {
     xAxis.style.majorGridLineStyle.showMajorGridLines = NO;
     xAxis.style.majorTickStyle.tickLabelOrientation = TickLabelOrientationHorizontal;
     xAxis.enableGesturePanning = YES;
-    xAxis.enableGesturePanning = YES;
+    xAxis.enableGestureZooming = YES;
     xAxis.enableMomentumPanning = YES;
     xAxis.enableMomentumZooming = YES;
     chart.xAxis = xAxis;

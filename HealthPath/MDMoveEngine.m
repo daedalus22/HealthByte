@@ -82,10 +82,10 @@
     NSString *title = nil;
     switch (index) {
         case 0:
-            title = @"stay";
+            title = @"Risk";
             break;
         case 1:
-            title = @"act";
+            title = @"Act";
             break;
         default:
             break;
