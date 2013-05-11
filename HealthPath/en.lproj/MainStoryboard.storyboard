@@ -671,7 +671,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Screen Shot 2013-05-10 at 4.41.28 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="nz5-Sv-x66">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Screen Shot 2013-05-10 at 7.46.22 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="nz5-Sv-x66">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="584" id="1VA-ZI-1xn"/>
                                 </constraints>
@@ -689,14 +689,29 @@
                                     <action selector="enterInfo:" destination="QJl-YI-VVk" eventType="touchUpInside" id="i5d-H2-P7X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNq-5z-sa7">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EzM-5B-abh" kind="modal" id="CRh-bM-rH2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZJb-xf-dnX" firstAttribute="top" secondItem="XcB-Q9-eJC" secondAttribute="top" constant="3" id="FEX-rd-pxm"/>
+                            <constraint firstAttribute="trailing" secondItem="vNq-5z-sa7" secondAttribute="trailing" constant="10" id="8TZ-kS-zn4"/>
+                            <constraint firstItem="nz5-Sv-x66" firstAttribute="trailing" secondItem="XcB-Q9-eJC" secondAttribute="trailing" type="default" id="Gh2-Dt-V6s"/>
+                            <constraint firstItem="vNq-5z-sa7" firstAttribute="top" secondItem="XcB-Q9-eJC" secondAttribute="top" constant="97" id="IFN-nu-X4f"/>
+                            <constraint firstItem="vNq-5z-sa7" firstAttribute="centerX" secondItem="ZJb-xf-dnX" secondAttribute="centerX" type="default" id="Z03-ZG-dlq"/>
+                            <constraint firstItem="ZJb-xf-dnX" firstAttribute="top" secondItem="XcB-Q9-eJC" secondAttribute="top" constant="10" id="adb-NH-FdS"/>
                             <constraint firstItem="nz5-Sv-x66" firstAttribute="leading" secondItem="XcB-Q9-eJC" secondAttribute="leading" type="default" id="h5Z-7B-gfy"/>
                             <constraint firstItem="nz5-Sv-x66" firstAttribute="top" secondItem="XcB-Q9-eJC" secondAttribute="top" type="default" id="kUV-Hq-WTD"/>
-                            <constraint firstItem="nz5-Sv-x66" firstAttribute="trailing" secondItem="XcB-Q9-eJC" secondAttribute="trailing" type="default" id="oLW-rX-2q0"/>
-                            <constraint firstAttribute="trailing" secondItem="ZJb-xf-dnX" secondAttribute="trailing" constant="7" id="yY1-gh-d4Q"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -708,6 +723,54 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="567" y="611"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="syg-mx-1jZ">
+            <objects>
+                <viewController id="EzM-5B-abh" customClass="MDSecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4WR-JW-4BU">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="md_eat_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-k6-iDy"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuG-EE-kPP">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterback:" destination="EzM-5B-abh" eventType="touchUpInside" id="ssN-S0-9h2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Clever Goal Setting" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-PA-ghu">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="VMe-W5-ufT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mzf-k6-iDy" firstAttribute="top" secondItem="4WR-JW-4BU" secondAttribute="top" type="default" id="B1N-Wl-gKE"/>
+                            <constraint firstItem="iuG-EE-kPP" firstAttribute="top" secondItem="4WR-JW-4BU" secondAttribute="top" constant="6" id="Nm3-pG-h6J"/>
+                            <constraint firstItem="6Wg-PA-ghu" firstAttribute="trailing" secondItem="4WR-JW-4BU" secondAttribute="trailing" type="default" id="O0g-Hy-qHn"/>
+                            <constraint firstItem="mzf-k6-iDy" firstAttribute="leading" secondItem="4WR-JW-4BU" secondAttribute="leading" type="default" id="Vth-sR-a1D"/>
+                            <constraint firstItem="mzf-k6-iDy" firstAttribute="bottom" secondItem="4WR-JW-4BU" secondAttribute="bottom" type="default" id="do0-DL-dCn"/>
+                            <constraint firstItem="6Wg-PA-ghu" firstAttribute="leading" secondItem="4WR-JW-4BU" secondAttribute="leading" type="default" id="gLl-6o-inB"/>
+                            <constraint firstAttribute="trailing" secondItem="iuG-EE-kPP" secondAttribute="trailing" constant="11" id="h1v-CH-ECs"/>
+                            <constraint firstItem="6Wg-PA-ghu" firstAttribute="top" secondItem="4WR-JW-4BU" secondAttribute="top" constant="31" id="zOY-sg-Igg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gV-y8-2Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="608"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dmt-JF-Bu0">
@@ -743,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKr-ev-RO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="611"/>
+            <point key="canvasLocation" x="1343" y="621"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EBk-Gt-9We">
@@ -791,8 +854,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2013-05-10 at 4.41.28 PM.png" width="318" height="545"/>
+        <image name="Screen Shot 2013-05-10 at 7.46.22 PM.png" width="319" height="548"/>
         <image name="circle_of_loved_ones.png" width="320" height="320"/>
+        <image name="md_eat_bg.png" width="320" height="569"/>
         <image name="md_friend_mockup.png" width="320" height="569"/>
         <image name="menu_icon.png" width="40" height="40"/>
         <image name="plate.png" width="48" height="48"/>
@@ -802,6 +866,76 @@
         <image name="star.png" width="43" height="41"/>
         <image name="water.png" width="38" height="36"/>
     </resources>
+    <classes>
+        <class className="MDCustomCorrView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomCorrView.h"/>
+        </class>
+        <class className="MDCustomDrawEatScoreBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawEatScoreBarView.h"/>
+        </class>
+        <class className="MDCustomDrawMoveScoreBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawMoveScoreBarView.h"/>
+        </class>
+        <class className="MDCustomDrawScoreView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawScoreView.h"/>
+        </class>
+        <class className="MDCustomDrawSleepScoreBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawSleepScoreBarView.h"/>
+        </class>
+        <class className="MDCustomEatView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomEatView.h"/>
+        </class>
+        <class className="MDCustomMoveView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomMoveView.h"/>
+        </class>
+        <class className="MDCustomScoreView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomScoreView.h"/>
+        </class>
+        <class className="MDCustomSleepView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomSleepView.h"/>
+        </class>
+        <class className="MDFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="MDSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
+        </class>
+        <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="summaryChartSwiped:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="veggieConsumed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="waterConsumed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="bvGoal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bvScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bvTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="eatScoreBarView" candidateClass="MDCustomDrawEatScoreBarView"/>
+                <relationship kind="outlet" name="moveScoreBarView" candidateClass="MDCustomDrawMoveScoreBarView"/>
+                <relationship kind="outlet" name="scoreCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="scoreHGraphView" candidateClass="MDCustomDrawScoreView"/>
+                <relationship kind="outlet" name="scoreView" candidateClass="MDCustomScoreView"/>
+                <relationship kind="outlet" name="sleepScoreBarView" candidateClass="MDCustomDrawSleepScoreBarView"/>
+                <relationship kind="outlet" name="svDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svEatScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svGreeting" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svMoveScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svSleepScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svStarImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="svStars" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svVeggieIcon" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="svVeggieLeft" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svWaterIcon" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="svWaterLeft" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

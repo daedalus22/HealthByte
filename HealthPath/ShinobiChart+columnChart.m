@@ -43,14 +43,14 @@
     //Our chart will have two y-axis - one on left and one on right
     
     //Setup rainfall y-axis on left of chart
-    SChartNumberRange *sleepRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:12]];
+    SChartNumberRange *sleepRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:105]];
     SChartNumberAxis *sleepAxis = [[SChartNumberAxis alloc] initWithRange:sleepRange];
-    sleepAxis.title = @"Sleep Time (hour)";
+    sleepAxis.title = @"Sleep (Stages)";
     sleepAxis.style.majorGridLineStyle.showMajorGridLines = NO;
     chart.yAxis = sleepAxis;
     
     //setup temperature y-axis on right of chart
-    SChartNumberRange *moveRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:3000]];
+    SChartNumberRange *moveRange = [[SChartNumberRange alloc] initWithMinimum:[NSNumber numberWithInt:0] andMaximum:[NSNumber numberWithInt:80]];
     SChartNumberAxis *moveAxis = [[SChartNumberAxis alloc] initWithRange:moveRange];
     moveAxis.title = [NSString stringWithFormat:@"Activity Time (%@C)",@"hour"];
     moveAxis.axisPosition = SChartAxisPositionReverse;

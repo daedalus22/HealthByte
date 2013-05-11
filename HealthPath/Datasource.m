@@ -61,7 +61,7 @@
     
     if ([[self keyForIndex:seriesIndex] isEqualToString:eat]) {
         // we use the data value for the radius - this value is presentation only
-        dp.yValue = [NSNumber numberWithInt:2000];
+        dp.yValue = [NSNumber numberWithInt:50];
         
     } else if ([[self keyForIndex:seriesIndex] isEqualToString:maxmove]) {
     
@@ -93,7 +93,8 @@
 - (float)sChartRadiusForDataPoint:(ShinobiChart *)chart dataPointAtIndex:(int)dataIndex forSeriesAtIndex:(int)seriesIndex {
     if ([[self keyForIndex:seriesIndex] isEqualToString:eat]) {
         float radiusModifier = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 0.4f : 0.5f;
-        return [[[[_alldata data] objectForKey:[[_alldata times] objectAtIndex:dataIndex]] objectForKey:[self keyForIndex:seriesIndex]] floatValue] / radiusModifier;
+        NSLog(@"radius %f \n", [[[[_alldata data] objectForKey:[[_alldata times] objectAtIndex:dataIndex]] objectForKey:[self keyForIndex:seriesIndex]] floatValue]);
+        return [[[[_alldata data] objectForKey:[[_alldata times] objectAtIndex:dataIndex]] objectForKey:[self keyForIndex:seriesIndex]] floatValue] / radiusModifier-5;
     }
     return 0.f;
 }

@@ -33,4 +33,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];  
 }
 
+- (IBAction)enterback:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];  
+}
+
 @end
