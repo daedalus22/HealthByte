@@ -986,17 +986,9 @@
         </class>
         <class className="MDFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="enterInfo:"/>
-                <relationship kind="action" name="enterback:"/>
-                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>
