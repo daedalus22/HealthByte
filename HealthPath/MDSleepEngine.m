@@ -102,16 +102,16 @@
     NSString *type = nil;
     switch (index) {
         case 0:
-            type = @"area_yellow";
+            type = @"col_yellow";
             break;
         case 1:
-            type = @"area_orange";
+            type = @"col_orange";
             break;
         case 2:
-            type = @"area_green";
+            type = @"col_green";
             break;
         case 3:
-            type = @"area_blue";
+            type = @"col_blue";
             break;
         
             

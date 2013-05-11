@@ -33,6 +33,7 @@
         lineSeries.style = [self.theme lineSeriesStyleForSeriesAtIndex:1 selected:NO];
         lineSeries.style.showFill = YES;
         lineSeries.baseline = @0;
+        lineSeries.style.fillWithGradient = YES;
         lineSeries.title = title;
         lineSeries.entryAnimation = [SChartAnimation growVerticalAnimation];
         lineSeries.animationEnabled = YES;
@@ -43,6 +44,7 @@
         lineSeries.style = [self.theme lineSeriesStyleForSeriesAtIndex:2 selected:NO];
         lineSeries.style.showFill = YES;
         lineSeries.baseline = @0;
+        lineSeries.style.fillWithGradient = YES;
         lineSeries.title = title;
         lineSeries.entryAnimation = [SChartAnimation growVerticalAnimation];
         lineSeries.animationEnabled = YES;
@@ -53,6 +55,7 @@
         lineSeries.style = [self.theme lineSeriesStyleForSeriesAtIndex:3 selected:NO];
         lineSeries.style.showFill = YES;
         lineSeries.baseline = @0;
+        lineSeries.style.fillWithGradient = YES;
         lineSeries.title = title;
         lineSeries.entryAnimation = [SChartAnimation growVerticalAnimation];
         lineSeries.animationEnabled = YES;
@@ -63,10 +66,39 @@
         lineSeries.style = [self.theme lineSeriesStyleForSeriesAtIndex:4 selected:NO];
         lineSeries.style.showFill = YES;
         lineSeries.baseline = @0;
+        lineSeries.style.fillWithGradient = YES;
         lineSeries.title = title;
         lineSeries.entryAnimation = [SChartAnimation growVerticalAnimation];
         lineSeries.animationEnabled = YES;
         series = lineSeries;
+        
+    } else if ([type isEqualToString:@"col_blue"]) {
+        SChartColumnSeries *colSeries = [SChartColumnSeries new];
+        colSeries.title = title;
+        colSeries.style = [self.theme columnSeriesStyleForSeriesAtIndex:1 selected:NO];
+        colSeries.stackIndex = [NSNumber numberWithInt:1];
+        series = colSeries;
+        
+    } else if ([type isEqualToString:@"col_orange"]) {
+        SChartColumnSeries *colSeries = [SChartColumnSeries new];
+        colSeries.title = title;
+        colSeries.style = [self.theme columnSeriesStyleForSeriesAtIndex:2 selected:NO];
+        colSeries.stackIndex = [NSNumber numberWithInt:1];
+        series = colSeries;
+        
+    } else if ([type isEqualToString:@"col_green"]) {
+        SChartColumnSeries *colSeries = [SChartColumnSeries new];
+        colSeries.title = title;
+        colSeries.style = [self.theme columnSeriesStyleForSeriesAtIndex:3 selected:NO];
+        colSeries.stackIndex = [NSNumber numberWithInt:1];
+        series = colSeries;
+        
+    } else if ([type isEqualToString:@"col_yellow"]) {
+        SChartColumnSeries *colSeries = [SChartColumnSeries new];
+        colSeries.title = title;
+        colSeries.style = [self.theme columnSeriesStyleForSeriesAtIndex:4 selected:NO];
+        colSeries.stackIndex = [NSNumber numberWithInt:1];
+        series = colSeries;
         
     } else if ([type isEqualToString:@"scatter"]) {
         SChartScatterSeries *scatterSeries = [SChartScatterSeries new];

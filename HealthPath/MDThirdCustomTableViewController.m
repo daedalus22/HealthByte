@@ -340,7 +340,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == MD_SLEEP_CELL) {
-        return 200;
+        return 320;
     }
     if (indexPath.row == MD_CORRELATION_CELL) {
         return 300;

@@ -394,11 +394,23 @@
                                                                 <segue destination="ztr-Wx-jQM" kind="modal" id="nzO-P7-LEw"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SLEEP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1T-ik-k6e">
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="j3e-hr-iJG"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="W7H-RM-KkV" firstAttribute="baseline" secondItem="511-U9-LRo" secondAttribute="baseline" type="default" id="Oq5-aU-Jxn"/>
+                                                        <constraint firstItem="H1T-ik-k6e" firstAttribute="trailing" secondItem="W7H-RM-KkV" secondAttribute="trailing" type="default" id="R2Y-nn-2d5"/>
+                                                        <constraint firstItem="H1T-ik-k6e" firstAttribute="leading" secondItem="W7H-RM-KkV" secondAttribute="leading" type="default" id="VEW-jb-cGS"/>
                                                         <constraint firstItem="W7H-RM-KkV" firstAttribute="leading" secondItem="mtS-Bp-t4X" secondAttribute="leading" constant="3" id="pzL-tM-86m"/>
+                                                        <constraint firstItem="H1T-ik-k6e" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" constant="3" id="uKk-HJ-eEW"/>
                                                         <constraint firstAttribute="trailing" secondItem="511-U9-LRo" secondAttribute="trailing" constant="9" id="vjv-fz-3Od"/>
                                                         <constraint firstItem="511-U9-LRo" firstAttribute="top" secondItem="mtS-Bp-t4X" secondAttribute="top" constant="6" id="zhI-bq-s93"/>
                                                     </constraints>
@@ -820,13 +832,23 @@
         </class>
         <class className="MDFirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
+            </relationships>
         </class>
         <class className="MDSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="enterInfo:"/>
+                <relationship kind="action" name="returnFromSegue:" candidateClass="UISwipeGestureRecognizer"/>
+            </relationships>
         </class>
         <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="summaryChartSwiped:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="veggieConsumed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="waterConsumed:" candidateClass="UILongPressGestureRecognizer"/>
                 <relationship kind="outlet" name="bvGoal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bvScore" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bvTitle" candidateClass="UILabel"/>
@@ -860,6 +882,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QqJ-QO-D23"/>
+        <segue reference="nzO-P7-LEw"/>
     </inferredMetricsTieBreakers>
 </document>

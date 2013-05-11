@@ -52,7 +52,7 @@ void drawMoveBox(CGContextRef context, CGRect rect) {
     chart.yAxis = yAxis;
     
     chart.backgroundColor = [UIColor clearColor];
-    chart.plotAreaBackgroundColor = [UIColor clearColor];
+//    chart.plotAreaBackgroundColor = [UIColor clearColor];
     chart.alpha = 1;
     
     _moveChart = chart;

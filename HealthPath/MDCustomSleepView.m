@@ -117,8 +117,11 @@ void drawBezierCurve(CGContextRef context) {
     chart.yAxis = yAxis;
     
     chart.backgroundColor = [UIColor clearColor];
-    chart.plotAreaBackgroundColor = [UIColor clearColor];
-    chart.alpha = 1;
+//    chart.plotAreaBackgroundColor = [UIColor clearColor];
+    //chart.alpha = 1;
+    chart.legend.hidden = NO;
+    chart.legend.position = SChartLegendPositionBottomMiddle;
+    chart.legend.placement = SChartLegendPlacementOutsidePlotArea;
     
     _sleepChart = chart;
     _sleepEngine = [[MDSleepEngine alloc] init];
@@ -127,5 +130,6 @@ void drawBezierCurve(CGContextRef context) {
     _sleepChart.datasource = _sleepEngine;
     _sleepChart.delegate = self;
     [self addSubview:_sleepChart];
+    drawBox(context, paperRect);
 }
 @end

@@ -41,7 +41,7 @@
         [_times addObject:[[_lines objectAtIndex:dp] objectAtIndex:0]];
         NSMutableArray *datas = [NSMutableArray new];
         for (int dt = 1; dt<[[_lines objectAtIndex:dp] count]; dt++) {
-            [datas addObject:[NSNumber numberWithFloat:100-[[[_lines objectAtIndex:dp] objectAtIndex:dt] floatValue]]];
+            [datas addObject:[NSNumber numberWithFloat:[[[_lines objectAtIndex:dp] objectAtIndex:dt] floatValue]]];
         }
         [_data setObject:[NSDictionary dictionaryWithObjects:datas forKeys:_dataKeys] forKey:[_times objectAtIndex:dp-1]];
     }
