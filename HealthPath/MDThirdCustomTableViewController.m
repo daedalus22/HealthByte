@@ -343,7 +343,7 @@
         return 320;
     }
     if (indexPath.row == MD_CORRELATION_CELL) {
-        return 300;
+        return 400;
     }
     if (indexPath.row == MD_SHARE_CELL) {
         return 320;
