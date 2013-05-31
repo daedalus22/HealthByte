@@ -55,9 +55,9 @@ void drawCorrBox(CGContextRef context, CGRect rect) {
     //set this controller to be the delegate for our chart
     columnChart.delegate = self;
     
-    [self addSubview:columnChart];
+//    [self addSubview:columnChart];
     
-    self.backgroundColor = columnChart.theme.chartStyle.backgroundColor;
+//    self.backgroundColor = columnChart.theme.chartStyle.backgroundColor;
 
     
     

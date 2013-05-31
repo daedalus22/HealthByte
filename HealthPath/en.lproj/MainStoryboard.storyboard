@@ -345,11 +345,16 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </label>
+                                                        <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Capture4.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="BXa-XO-F2K"/>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="Yo8-Xe-jW4" firstAttribute="top" secondItem="za2-aQ-JN9" secondAttribute="top" constant="3" id="Ogw-UY-Jad"/>
-                                                        <constraint firstItem="Yo8-Xe-jW4" firstAttribute="leading" secondItem="za2-aQ-JN9" secondAttribute="leading" constant="3" id="k2h-Xt-x9M"/>
+                                                        <constraint firstItem="BXa-XO-F2K" firstAttribute="top" secondItem="za2-aQ-JN9" secondAttribute="top" type="default" id="U6z-8p-mLf"/>
+                                                        <constraint firstItem="Yo8-Xe-jW4" firstAttribute="top" secondItem="za2-aQ-JN9" secondAttribute="top" constant="3" id="fim-ng-rwi"/>
+                                                        <constraint firstItem="BXa-XO-F2K" firstAttribute="leading" secondItem="za2-aQ-JN9" secondAttribute="leading" type="default" id="mLP-v6-pBb"/>
+                                                        <constraint firstItem="BXa-XO-F2K" firstAttribute="bottom" secondItem="za2-aQ-JN9" secondAttribute="bottom" type="default" id="pNE-Hg-DQ3"/>
+                                                        <constraint firstItem="Yo8-Xe-jW4" firstAttribute="leading" secondItem="za2-aQ-JN9" secondAttribute="leading" constant="3" id="rHI-fZ-lYh"/>
+                                                        <constraint firstItem="BXa-XO-F2K" firstAttribute="trailing" secondItem="za2-aQ-JN9" secondAttribute="trailing" type="default" id="uKE-Rs-qqs"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -966,6 +971,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Capture4.PNG" width="634" height="637"/>
         <image name="Screen Shot 2013-05-10 at 7.46.22 PM.png" width="319" height="548"/>
         <image name="circle_of_loved_ones.png" width="320" height="320"/>
         <image name="md_friend_mockup.png" width="320" height="569"/>
@@ -978,6 +984,76 @@
         <image name="star.png" width="43" height="41"/>
         <image name="water.png" width="38" height="36"/>
     </resources>
+    <classes>
+        <class className="MDCustomCorrView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomCorrView.h"/>
+        </class>
+        <class className="MDCustomDrawEatScoreBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawEatScoreBarView.h"/>
+        </class>
+        <class className="MDCustomDrawMoveScoreBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawMoveScoreBarView.h"/>
+        </class>
+        <class className="MDCustomDrawScoreView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawScoreView.h"/>
+        </class>
+        <class className="MDCustomDrawSleepScoreBarView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomDrawSleepScoreBarView.h"/>
+        </class>
+        <class className="MDCustomEatView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomEatView.h"/>
+        </class>
+        <class className="MDCustomMoveView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomMoveView.h"/>
+        </class>
+        <class className="MDCustomScoreView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomScoreView.h"/>
+        </class>
+        <class className="MDCustomSleepView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDCustomSleepView.h"/>
+        </class>
+        <class className="MDFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDFirstViewController.h"/>
+        </class>
+        <class className="MDSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDSecondViewController.h"/>
+        </class>
+        <class className="MDThirdCustomTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MDThirdCustomTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="drinkAlertView:"/>
+                <relationship kind="action" name="moveAlertView:"/>
+                <relationship kind="action" name="sleepAlertView:"/>
+                <relationship kind="action" name="summaryChartSwiped:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="veggieConsumed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="waterConsumed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="bvGoal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bvScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bvTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="eatScoreBarView" candidateClass="MDCustomDrawEatScoreBarView"/>
+                <relationship kind="outlet" name="moveScoreBarView" candidateClass="MDCustomDrawMoveScoreBarView"/>
+                <relationship kind="outlet" name="scoreCell" candidateClass="UITableViewCell"/>
+                <relationship kind="outlet" name="scoreHGraphView" candidateClass="MDCustomDrawScoreView"/>
+                <relationship kind="outlet" name="scoreView" candidateClass="MDCustomScoreView"/>
+                <relationship kind="outlet" name="sleepScoreBarView" candidateClass="MDCustomDrawSleepScoreBarView"/>
+                <relationship kind="outlet" name="svDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svEatScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svGreeting" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svMoveScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svSleepScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svStarImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="svStars" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svVeggieIcon" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="svVeggieLeft" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="svWaterIcon" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="svWaterLeft" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

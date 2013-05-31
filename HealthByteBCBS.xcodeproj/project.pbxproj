@@ -79,6 +79,7 @@
 		3CD29C81173DD46100FB6427 /* Screen Shot 2013-05-10 at 4.41.28 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD29C80173DD46100FB6427 /* Screen Shot 2013-05-10 at 4.41.28 PM.png */; };
 		3CD29C83173DEB3E00FB6427 /* Screen Shot 2013-05-10 at 7.46.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD29C82173DEB3E00FB6427 /* Screen Shot 2013-05-10 at 7.46.22 PM.png */; };
 		AD0C018B173DC9FE00027D4C /* sleepdata.csv in Resources */ = {isa = PBXBuildFile; fileRef = AD0C018A173DC9FE00027D4C /* sleepdata.csv */; };
+		AD192020175866B100A0EDA8 /* Capture4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = AD19201F175866B100A0EDA8 /* Capture4.PNG */; };
 		ADC9A284173DA8C900051ED0 /* ShinobiChart+trialChart.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A283173DA8C900051ED0 /* ShinobiChart+trialChart.m */; };
 		ADC9A28A173DA8DA00051ED0 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A286173DA8DA00051ED0 /* CHCSVParser.m */; };
 		ADC9A28C173DA8DA00051ED0 /* MDMoveData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC9A289173DA8DA00051ED0 /* MDMoveData.m */; };
@@ -186,6 +187,7 @@
 		3CD29C80173DD46100FB6427 /* Screen Shot 2013-05-10 at 4.41.28 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2013-05-10 at 4.41.28 PM.png"; sourceTree = "<group>"; };
 		3CD29C82173DEB3E00FB6427 /* Screen Shot 2013-05-10 at 7.46.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2013-05-10 at 7.46.22 PM.png"; sourceTree = "<group>"; };
 		AD0C018A173DC9FE00027D4C /* sleepdata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sleepdata.csv; sourceTree = "<group>"; };
+		AD19201F175866B100A0EDA8 /* Capture4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capture4.PNG; sourceTree = "<group>"; };
 		ADC9A282173DA8C900051ED0 /* ShinobiChart+trialChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShinobiChart+trialChart.h"; sourceTree = "<group>"; };
 		ADC9A283173DA8C900051ED0 /* ShinobiChart+trialChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShinobiChart+trialChart.m"; sourceTree = "<group>"; };
 		ADC9A285173DA8DA00051ED0 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		0587FCA217383484003DF1E1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AD19201F175866B100A0EDA8 /* Capture4.PNG */,
 				3CD29C82173DEB3E00FB6427 /* Screen Shot 2013-05-10 at 7.46.22 PM.png */,
 				3CD29C80173DD46100FB6427 /* Screen Shot 2013-05-10 at 4.41.28 PM.png */,
 				0500C066173D943200070F15 /* circle_of_loved_ones.png */,
@@ -497,6 +500,7 @@
 				05CF1F09173E3F38006EEE80 /* santa.png in Resources */,
 				05CF1F0A173E3F38006EEE80 /* santa@2x.png in Resources */,
 				05CF1F0C173E3F38006EEE80 /* sucess_border.png in Resources */,
+				AD192020175866B100A0EDA8 /* Capture4.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
