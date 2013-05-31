@@ -344,7 +344,7 @@
         return 320;
     }
     if (indexPath.row == MD_CORRELATION_CELL) {
-        return 400;
+        return 320;
     }
     if (indexPath.row == MD_SHARE_CELL) {
         return 320;
@@ -714,8 +714,8 @@
 }
 
 - (IBAction)drinkAlertView:(id)sender {
-    GRAlertView *alert = [[GRAlertView alloc] initWithTitle:@"Encouragement"
-                                                    message:@"A couple more waters to go!"
+    GRAlertView *alert = [[GRAlertView alloc] initWithTitle:@"Take a break"
+                                                    message:@"Walk with Jane!"
                                                    delegate:self
                                           cancelButtonTitle:nil
                                           otherButtonTitles:@"OK", nil];

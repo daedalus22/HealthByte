@@ -46,22 +46,38 @@
     
     // draws circle centered at (160, 120) radius 80. from top (-pi/2) to pi, clockwise
     bool clockwise = YES;
+    
+    float workR, homeR, leisureR, workH, homeH, leisureH;
+
+    workH = 15;
+    homeH = 7;
+    leisureH = 2;
+    hGraphEatScore = 60;
+    hGraphMoveScore = 50;
+    hGraphSleepScore = 40;
+    
+    homeR = -M_PI/2+M_PI*homeH/12/2;
+    leisureR = homeR + M_PI*homeH/12/2 + M_PI*leisureH/12/2;
+    workR = leisureR + M_PI*leisureH/12/2 + M_PI*workH/12/2;
+    
     CGContextAddArc(context,
                     centerx,
                     centery,
                     radius,
-                    -M_PI_2,
-                    M_PI/6,
+                    homeR-M_PI*homeH/12/2,
+                    homeR+M_PI*homeH/12/2,
                     clockwise ? 0 : 1);
     
     CGContextStrokePath(context);
     CGContextSetStrokeColorWithColor(context, [UIColor purpleColor].CGColor);
+    
+    
     CGContextAddArc(context,
                     centerx,
                     centery,
                     radius,
-                    M_PI/6,
-                    M_PI_2+(M_PI/6*2),
+                    leisureR-M_PI*leisureH/12/2,
+                    leisureR+M_PI*leisureH/12/2,
                     clockwise ? 0 : 1);
     
     CGContextStrokePath(context);
@@ -71,12 +87,37 @@
                     centerx,
                     centery,
                     radius,
-                    M_PI_2+(M_PI/6*2),
-                    -M_PI_2,
+                    workR-M_PI*workH/12/2,
+                    workR+M_PI*workH/12/2,
                     clockwise ? 0 : 1);
     
     CGContextStrokePath(context);
     CGContextRestoreGState(context);
+    
+    CGContextSaveGState(context);
+    
+    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    
+    CGContextSelectFont(context, "Helvetica", 16, kCGEncodingMacRoman);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetTextPosition(context, centerx+ cosf(homeR)*radius-20, centery+ sinf(homeR)*radius+5);
+    CGContextShowText(context, [@"Home" UTF8String], strlen([@"Home" UTF8String]));
+    
+    CGContextSelectFont(context, "Helvetica", 16, kCGEncodingMacRoman);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetTextPosition(context, centerx+ cosf(workR)*radius-20, centery+ sinf(workR)*radius+5);
+    CGContextShowText(context, [@"Work" UTF8String], strlen([@"Work" UTF8String]));
+    
+    CGContextSelectFont(context, "Helvetica", 16, kCGEncodingMacRoman);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetTextPosition(context, centerx+ cosf(leisureR)*radius-25, centery+ sinf(leisureR)*radius+3);
+    CGContextShowText(context, [@"Leisure" UTF8String], strlen([@"Leisure" UTF8String]));
+    
+    CGContextRestoreGState(context);
+
 #endif
     
     // draw a dot
@@ -89,8 +130,8 @@
     CGAffineTransform xform = CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0);
     CGContextSetTextMatrix(context, xform);
     // EAT
-    cosR = cosf(-M_PI/6)*radius*hGraphEatScore/100.0;
-    sinR = sinf(-M_PI/6)*radius*hGraphEatScore/100.0;
+    cosR = cosf(M_PI/6)*radius*hGraphEatScore/100.0;
+    sinR = sinf(M_PI/6)*radius*hGraphEatScore/100.0;
 
     CGContextMoveToPoint(context, centerx+cosR, centery+sinR);
     // CGContextMoveToPoint(context, centerx, centery);
@@ -105,12 +146,12 @@
     
     CGContextSelectFont(context, "Helvetica", 12, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
-    CGContextSetTextPosition(context, centerx+cosR + 15, centery+sinR-7);
+    CGContextSetTextPosition(context, centerx+cosR - 15, centery+sinR-8);
     CGContextShowText(context, [@"EAT" UTF8String], strlen([@"EAT" UTF8String]));
     
     // SLEEP
-    cosR = cosf(-5*M_PI/6)*radius*hGraphSleepScore/100.0;
-    sinR = sinf(-5*M_PI/6)*radius*hGraphSleepScore/100.0;
+    cosR = cosf(-3*M_PI/6)*radius*hGraphSleepScore/100.0;
+    sinR = sinf(-3*M_PI/6)*radius*hGraphSleepScore/100.0;
     
     CGContextMoveToPoint(context, centerx+cosR, centery+sinR);
     // CGContextMoveToPoint(context, centerx, centery);
@@ -125,12 +166,12 @@
     
     CGContextSelectFont(context, "Helvetica", 12, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
-    CGContextSetTextPosition(context, centerx+cosR + 15, centery+sinR - 7);
+    CGContextSetTextPosition(context, centerx+cosR - 15, centery+sinR - 8);
     CGContextShowText(context, [@"SLEEP" UTF8String], strlen([@"SLEEP" UTF8String]));
     
     // MOVE
-    cosR = cosf(M_PI_2)*radius*hGraphMoveScore/100.0;
-    sinR = sinf(M_PI_2)*radius*hGraphMoveScore/100.0;
+    cosR = cosf(5*M_PI/6)*radius*hGraphMoveScore/100.0;
+    sinR = sinf(5*M_PI/6)*radius*hGraphMoveScore/100.0;
     
     CGContextMoveToPoint(context, centerx+cosR, centery+sinR);
     // CGContextMoveToPoint(context, centerx, centery);
@@ -145,7 +186,7 @@
     
     CGContextSelectFont(context, "Helvetica", 12, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
-    CGContextSetTextPosition(context, centerx+cosR + 15, centery+sinR-7);
+    CGContextSetTextPosition(context, centerx+cosR - 15, centery+sinR-8);
     CGContextShowText(context, [@"MOVE" UTF8String], strlen([@"MOVE" UTF8String]));
     
     CGContextRestoreGState(context);
